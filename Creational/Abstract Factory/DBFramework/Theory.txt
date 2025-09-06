@@ -1,0 +1,27 @@
+The course content discusses the challenges of creating instances of different database classes in a flexible and maintainable way.
+
+Database Class Instantiation Challenges
+- The use of preprocessor directives to create instances of SQL and MySQL connections can lead to code that is difficult to maintain.
+- This approach fixes the database type at compile time, limiting runtime flexibility in choosing the database.
+
+Conditional Statements as a Solution
+- Replacing preprocessor directives with conditional statements improves readability but still complicates maintenance, especially when adding new databases.
+- There is a risk of bugs being introduced when modifying multiple parts of the code to support new database types.
+
+Enforcing Consistency in Database Usage
+- The current implementation does not prevent users from mixing database classes, which can lead to runtime errors.
+- A factory method will be implemented to ensure that instances are created consistently from the same database set, enhancing code reliability.
+
+
+
+The course content focuses on implementing the Factory Method and Abstract Factory design patterns in modern C++ to improve code maintainability and flexibility.
+Factory Method Pattern
+- The Factory Method allows instantiation of classes without depending on their concrete types, reducing tight coupling in the code.
+- It creates instances based on specified types (e.g., SQL or MySQL) but does not ensure that instances belong to the same database context.
+
+Abstract Factory Pattern
+- The Abstract Factory pattern addresses the limitation of the Factory Method by creating specific factories for each database type (e.g., SQLFactory and MySQLFactory).
+- It enforces that instances created by the same factory are from the same database, preventing mixing of classes from different databases.
+
+Implementation Steps
+- The course demonstrates how to implement these patterns in code, ensuring that the client code can create instances of command and connection classes while maintaining a single database context.
