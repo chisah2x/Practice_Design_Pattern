@@ -1,0 +1,51 @@
+Understanding Operator() Overload in C++
+
+In C++, the `operator()` overload allows you to define how an object behaves when it is called like a function. 
+This is often referred to as a "functor" or function object. 
+
+- **Example**: 
+```cpp
+class Adder {
+public:
+    // Overloading operator() to add a given value
+    int operator()(int x) {
+        return x + 10; // Adds 10 to the input value
+    }
+};
+
+int main() {
+    Adder add; // Create an instance of Adder
+    int result = add(5); // Calls operator() with 5
+    // result will be 15
+}
+```
+
+### Explanation:
+- In the example above, the `Adder` class has an overloaded `operator()`. When you create an instance of `Adder` and call it with an integer (like `add(5)`), it executes the code inside `operator()`, adding 10 to the input value.
+
+- **Use Cases**: This feature is particularly useful in scenarios like:
+  - Custom sorting functions.
+  - Callback functions in algorithms.
+  - Creating more readable and maintainable code.
+
+/*
+Understanding Private Constructors in Object Pools
+
+- **Private Constructor Challenge**: A client class with a private constructor cannot be instantiated directly from outside its definition, making it difficult to manage instances in an object pool.
+
+- **Custom Allocator Solution**: To address this, a custom allocator acts as a keyholder, allowing the object pool to create instances of the class with the private constructor.
+
+- **Flexibility in Allocation**: The client can provide the allocator to the object pool, enabling it to manage object creation and deallocation without direct access to the constructor.
+
+- **Adaptable Management**: This approach allows the client to choose how objects are allocated and deallocated, enhancing the flexibility of the object pool.
+
+*/
+
+
+Understanding the `nodiscard` Attribute in C++
+
+- **Purpose of `nodiscard -> Compiler Warning**: 
+When a function with the `nodiscard` attribute is called and its return value is not assigned to a variable, the compiler generates a warning. 
+This serves as a reminder to the developer to handle the return value appropriately.
+
+- **Custom Messages**: In C++20, you can specify a custom message for the warning. This allows you to provide more context about why the return value is important, making it clearer for developers.
