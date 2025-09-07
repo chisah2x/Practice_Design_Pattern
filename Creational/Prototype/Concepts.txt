@@ -1,0 +1,42 @@
+### Purpose of `operator<<` Overloading
+- **Custom Output**: It enables you to specify how your objects should be formatted when printed, making it easier to display complex data types.
+- **Function Signature**: 
+  std::ostream& operator<<(std::ostream& out, const YourClass& obj);
+- **Friend Function**: Often declared as a `friend` to allow access to private members of the class, though it can also work with public members without it.
+
+### Implementation Steps
+1. **Define the Function**: Implement the function to format the output as desired.
+2. **Return the Stream**: Ensure the function returns the output stream to allow chaining of output operations.
+
+### Example
+Here’s a simple example of overloading `operator<<` for a `Point` class:
+```cpp
+class Point {
+public:
+    int x, y;
+    friend std::ostream& operator<<(std::ostream& out, const Point& p) {
+        return out << "(" << p.x << ", " << p.y << ")";
+    }
+};
+```
+
+
+The purpose of inheriting constructors in C++ is to simplify the code and enhance maintainability by allowing derived classes to automatically use the constructors of their base classes. 
+Here are some key benefits:
+- **Code Reusability**: It eliminates the need to rewrite constructor code in derived classes, promoting code reuse and reducing redundancy.
+- **Consistency**: Ensures that the initialization logic defined in the base class is consistently applied to derived classes, which helps maintain uniform behavior across related classes.
+- **Flexibility**: Allows derived classes to extend or modify the behavior of the base class constructors if needed, while still having access to the base class's initialization logic.
+
+For example, if you have a base class `Vehicle` with a constructor that initializes certain properties, derived classes like `Car` or `Bus` can inherit that constructor, making it easier to create objects of those classes with the same initialization parameters.
+
+
+Implementing deep copy in vehicle classes using copy constructors and the rule of five in C++.
+Copy Constructor Implementation
+- A new instance is created, and its attributes are initialized with the current instance's values.
+- Existing code in vehicle subclasses utilizes these constructors for deep copying without modification.
+Rule of Five
+- In addition to the copy constructor, move constructor and move assignment are implemented for managing resources.
+- Child classes may not require changes if they do not manage resources, as the compiler synthesizes appropriate functions.
+Polymorphic Cloning
+- The prototype pattern is used to avoid expensive object creation by cloning existing objects with pre-loaded data.
+- This allows for creating copies without knowing the exact types, enhancing efficiency in the application.
