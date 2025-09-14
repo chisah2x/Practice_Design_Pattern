@@ -1,0 +1,19 @@
+Facade Design Pattern
+- A facade acts as a layer around a system, making it easier for clients to interact with complex components.
+- It reduces tight coupling between clients and system components, converting complex interfaces into simpler ones.
+
+Intent and Structure
+- The primary intent of the facade pattern is to provide a higher-level interface that simplifies subsystem usage.
+- Facades can be implemented as functions, classes, or sets of classes, and multiple facades can exist for different functionalities.
+
+Types of Facades
+- Transparent facades allow clients direct access to underlying classes, while opaque facades hide these classes, making them essential for client interaction.
+- Facades may pass client requests to underlying classes and can perform additional processing as needed.
+
+Advantages and Disadvantages
+- Advantages include weak coupling, allowing underlying components to change without affecting clients, and reduced compilation dependencies.
+- Disadvantages may arise from overusing the pattern, leading to excessive layers and potential performance degradation.
+
+When to Use the Façade Pattern
+- It is beneficial for creating simple interfaces for complex systems, especially when working with low-level functions or when team members have varying experience levels.
+- The pattern can also help manage dependencies between clients and implementation classes effectively.

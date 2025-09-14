@@ -1,0 +1,38 @@
+The main purpose of the **proxy design pattern** is to provide a surrogate or placeholder for another object, allowing control over access to that object. 
+This pattern is useful for:
+- **Adding Functionality**: It allows additional features to be added to an object without modifying the original object.
+- **Access Control**: It can manage access to the real object, which is particularly beneficial in scenarios like multithreading or when authentication is required.
+- **Resource Optimization**: Proxies can instantiate real objects on demand, which helps in managing resources efficiently, especially when dealing with expensive objects.
+
+Overall, the proxy design pattern enhances flexibility and control in software design.
+
+Types of Proxies
+- Virtual Proxy: Creates expensive objects only when needed.
+- Cache Proxy: Caches expensive calls to improve performance.
+- Remote Proxy: Simplifies access to remote components.
+- Protection Proxy: Restricts direct access to the real subject.
+- Smart Proxy: Performs additional actions upon accessing the real subject.
+
+
+Advantages and Disadvantages
+
+Advantages include providing a layer of indirection, hiding the real subject's location, and managing access.
+Disadvantages involve tight coupling between the proxy and the real subject and limited runtime behavior modification.
+When to Use the Proxy Pattern
+
+Use when direct access to the real object is not desired, such as for remote components, expensive object creation, or access restrictions. Smart pointers can also be used to avoid manual memory management.
+
+
+
+Remote Proxy Overview
+
+A remote proxy allows a client to interact with a class that resides in a different process or address space, which may be on the same machine, a different machine on the same network, or over the internet.
+It simplifies the implementation for both the client and server processes by handling the complexities of remote communication.
+Functionality of Remote Proxy
+
+The remote proxy class on the client side has the same interface as the actual class, allowing the client to use it without realizing it is a proxy.
+The proxy manages the communication over the network and marshals any data that needs to be sent to or received from the actual class.
+Stub Proxy
+
+On the server side, a corresponding stub proxy is used, which communicates with the remote proxy.
+Both the client and server are unaware that they are interacting with components in different processes, making the implementation more straightforward.
