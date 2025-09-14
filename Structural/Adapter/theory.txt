@@ -1,0 +1,33 @@
+Adapter Design Pattern:
+
+**Structure of the Adapter Pattern**
+- **Object Adapter**: Adapts an incompatible interface by composing the adaptee and inheriting from the target.
+- **Class Adapter**: Inherits from both the target and the adaptee, allowing direct method calls.
+
+**Advantages of Object Adapter**
+- **Multiple Class Compatibility**: Can adapt to multiple classes in a hierarchy.
+- **Adaptation of Hidden Classes**: Can adapt to existing classes even if they are hidden.
+
+**Disadvantages of Object Adapter**
+- **No Behavior Override**: Cannot override the behavior of the adaptee.
+- **Pointer Indirection**: Method calls are made through pointers, which may add complexity.
+
+**Advantages of Class Adapter**
+- **Direct Method Calls**: Inherits methods directly, eliminating pointer indirection.
+- **Behavior Override**: Can override the behavior of the adaptee.
+Private Inheritance Option: By using private inheritance, methods from the adaptee can be hidden from clients, preventing access to certain functions.
+
+**Disadvantages of Class Adapter**
+- **Inheritance Limitations**: Cannot be used with final or sealed classes.
+- **Language Support**: Not all programming languages support multiple inheritance.
+
+**When to Use the Adapter Pattern**
+- **Incompatible Interfaces**: Use when needing to work with existing components that have incompatible interfaces.
+- **Hierarchy Adaptation**: Useful for adapting classes from an existing hierarchy.
+
+
+Key Differences:
+
+Flexibility: Inheritance provides more flexibility for modifying behavior through overriding, while composition promotes encapsulation and reusability without altering the original class.
+Coupling: Inheritance creates a tighter coupling between classes, whereas composition allows for looser coupling, making it easier to change or replace components.
+
