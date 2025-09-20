@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="OutputStream" Collapsed="true">
+    <Position X="5.75" Y="1" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAA=</HashCode>
+      <FileName>OutputStream.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CompressedOutputStream" Collapsed="true">
+    <Position X="8.75" Y="2.5" Width="2" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAGAAAA=</HashCode>
+      <FileName>CompressedOutputStream.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FileOutputStream" Collapsed="true">
+    <Position X="5.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABBAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAAAA=</HashCode>
+      <FileName>FileOutputStream.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EncryptedStream" Collapsed="true">
+    <Position X="11" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAGAAAA=</HashCode>
+      <FileName>EncryptedStream.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="BufferedOutputStream" Collapsed="true">
+    <Position X="12.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAGAgAA=</HashCode>
+      <FileName>BufferedOutputStream.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>
